@@ -1,6 +1,8 @@
 <?php
 include "./com/base.php";
 
+//獎號頭2碼轉為大寫
+$_POST['code']=strtoupper($_POST['code']);
 
 $sql= "INSERT INTO invoice (`period`,`year`,`code`,`number`,`expense`) VALUES ('".$_POST['period']."','".$_POST['year']."','".$_POST['code']."','".$_POST['number']."','".$_POST['expense']."')";
 
@@ -20,5 +22,3 @@ if($res==1){
 }else{
     echo "新增失敗";
 }
-
-?>
