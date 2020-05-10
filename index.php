@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="./bootstrap-4.4.1-dist/css/bootstrap.css">
     <style>
         body {
+            font-family: "微軟正黑體";
             min-width: 600px;
             min-height: 100vh;
-            background: linear-gradient(135deg, red, orange, gold, green, blue, purple);
-            overflow: hidden;
+            background: linear-gradient(87deg, red, orange, gold, green, blue, indigo, purple);
+            /* overflow: hidden; */
             /* color:white; */
         }
     </style>
@@ -51,12 +52,14 @@
                 <label class="form-label col-3" for="expense">花費：</label>
                 <input class="form-control col-9" type="text" name="expense" pattern="^[1-9]\d*$" maxlength="10">
             </div>
-                <input class="btn btn-outline-info m-2" type="submit" valut="儲存">
+            <input class="btn btn-outline-info m-2" type="submit" valut="儲存">
+            <a class="btn btn-outline-info" href="list.php">發票列表</a>
+            <a class="btn btn-outline-info" href="award.php">對獎</a>
         </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 
 </html>
