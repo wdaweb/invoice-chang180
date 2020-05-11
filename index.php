@@ -52,7 +52,7 @@
                 <label class="form-label col-3" for="expense">花費：</label>
                 <input class="form-control col-9" type="text" name="expense" pattern="^[1-9]\d*$" maxlength="10">
             </div>
-            <input class="btn btn-outline-info m-2" type="submit" valut="儲存">
+            <input class="btn btn-outline-info m-2" type="submit" value="儲存">
             <a class="btn btn-outline-info" href="list.php">發票列表</a>
             <a class="btn btn-outline-info" href="award.php">對獎</a>
         </form>
