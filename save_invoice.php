@@ -1,7 +1,6 @@
 <?php
 include "./com/base.php";
 
-$id = $_POST['id'];
 //獎號頭2碼轉為大寫
 $code = strtoupper($_POST['code']);
 $period = $_POST['period'];
@@ -10,6 +9,7 @@ $number = $_POST['number'];
 $expense = $_POST['expense'];
 
 if (isset($_POST['id'])) {
+    $id = $_POST['id'];
     $sql = "UPDATE `invoice` SET `code` = '$code', `number` = '$number', `period` = '$period', `expense` = '$expense', `year` = '$year' WHERE `invoice`.`id` = $id";
 } else {
     // $sql = "INSERT INTO invoice (`period`,`year`,`code`,`number`,`expense`) VALUES ('" . $_POST['period'] . "','" . $_POST['year'] . "','" . $_POST['code'] . "','" . $_POST['number'] . "','" . $_POST['expense'] . "')";
@@ -17,7 +17,6 @@ if (isset($_POST['id'])) {
     $sql = "INSERT INTO invoice (`period`,`year`,`code`,`number`,`expense`) VALUES ('$period','$year','$code','$number','$expense')";
 }
 
-echo "id=", $_POST['id'], "<br>";
 echo "period=", $_POST['period'], "<br>";
 echo "year=", $_POST['year'], "<br>";
 echo "code=", $_POST['code'], "<br>";
