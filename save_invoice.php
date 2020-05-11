@@ -1,6 +1,7 @@
 <?php
 include "./com/base.php";
 
+$id = $_POST['id'];
 //獎號頭2碼轉為大寫
 $code = strtoupper($_POST['code']);
 $period = $_POST['period'];
