@@ -1,7 +1,7 @@
 <?php
 include "./com/base.php";
 // 以GET方式取得欲刪除的資料id
-$id=$_GET['id'];
+$id = $_GET['id'];
 // echo $id;
 
 $sql="DELETE FROM `invoice` WHERE `invoice`.`id`='$id'";
@@ -14,9 +14,21 @@ if($res==1){
     echo "刪除失敗<br>";
 }
 
-?>
 
-<!-- <hr>
-<a href="index.php">回首頁</a>
-<hr>
-<a href="list.php">發票列表</a> -->
+// if (!empty($_GET['do'])) {
+//     if ($_GET['do'] == "true") {
+//         $sql = "DELETE FROM `invoice` WHERE `invoice`.`id`='$id'";
+//         $pdo->exec($sql);
+//         header("location:list.php");
+//     } else {
+
+//         header("location:list.php");
+//     }
+// }
+?>
+<!-- <div class="box">
+    <div class="meg">確認刪除？</div>
+
+    <a href="?do=true&id=<?= $id; ?>">確認刪除</a>
+    <a href="?do=false&id=<?= $id; ?>">取消</a>
+</div> -->
