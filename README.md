@@ -36,25 +36,25 @@
    - 有一個編輯的按鈕，按下後可以編輯該期別的獎號
 ## 資料庫設計
 1. 發票資料表-invoice
-   - id
-   - code
-   - number
-   - period
-   - expend
-   - year
-2. 獎號資料表- award_number
-   - id
-   - period
-   - item
-   - number
-   - year
-3. 中獎紀錄表- reward_record
-   - id
-   - number
-   - period
-   - reward
-   - expend
-   - year
+   - id int(10),auto_increment,primary key
+   - code varchar(2)
+   - number varchar(8)
+   - period tinyint(1), unsigned
+   - expense int(10), unsigned
+   - year varchar(4)
+2. 獎號資料表- award
+   - id int(10),auto_increment,primary key
+   - period tinyint(1), unsigned
+   - item varchar(3)
+   - number varchar(8)
+   - year varchar(4)
+3. 中獎紀錄表- record
+   - id int(10),auto_increment,primary key
+   - number varchar(8)
+   - period tinyint(1), unsigned
+   - reward 
+   - expense int(10), unsigned
+   - year varchar(4)
 ## 程式功能設計
 1. 接收發票號並存入資料庫
 2. 接收獎號並存入資料庫
@@ -73,6 +73,11 @@
 
 
 ### 開發記錄
+
+#### 2020-05-16
+
+* 增加中獎號碼資料表
+* 進行輸入中獎號碼製作
 
 #### 2020-05-14
 

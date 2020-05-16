@@ -12,6 +12,7 @@
             font-family: "微軟正黑體";
             min-width: 600px;
             min-height: 100vh;
+            background: #eee;
             /* overflow: hidden; */
         }
     </style>
@@ -31,7 +32,7 @@
     $sql = "SELECT * FROM `invoice` WHERE period='$period'";
     $rows = $pdo->query($sql)->fetchAll();
     ?>
-    <div class="container mt-2">
+    <div class="container mt-5 p-3 border rounded-lg shadow">
         <h1 class="text-center">發票列表</h1>
         <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -41,7 +42,7 @@
             </div>
         </nav>
         <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel">
                 <ul class="nav nav-tabs">
                     <li class="nav-item"><a class="nav-link  <?= ($period == 1) ? 'active' : ''; ?>" href='list.php?period=1'>1,2月</a></li>
                     <li class="nav-item"><a class="nav-link  <?= ($period == 2) ? 'active' : ''; ?>" href='list.php?period=2'>3,4月</a></li>
@@ -53,7 +54,7 @@
                 </ul>
 
             </div>
-            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel">
                 <ul class="nav nav-tabs">
                     <li class="nav-item"><a class="nav-link  <?= ($period == 1) ? 'active' : ''; ?>" href='list.php?period=1'>1,2月</a></li>
                     <li class="nav-item"><a class="nav-link  <?= ($period == 2) ? 'active' : ''; ?>" href='list.php?period=2'>3,4月</a></li>
@@ -65,7 +66,7 @@
                 </ul>
 
             </div>
-            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+            <div class="tab-pane fade" id="nav-contact" role="tabpanel">
                 <ul class="nav nav-tabs">
                     <li class="nav-item"><a class="nav-link  <?= ($period == 1) ? 'active' : ''; ?>" href='list.php?period=1'>1,2月</a></li>
                     <li class="nav-item"><a class="nav-link  <?= ($period == 2) ? 'active' : ''; ?>" href='list.php?period=2'>3,4月</a></li>
@@ -78,7 +79,7 @@
 
             </div>
         </div>
-        <table class="table border rouded-lg shadow">
+        <table class="table">
             <tr>
                 <td>年份</td>
                 <td>期別</td>
