@@ -20,8 +20,8 @@
 
 <body>
     <?php
-    // include "./include/header.php";
     include "./com/base.php";
+    include "./include/header.php";
     // PHP語法糖 合併運算符 ??
     $period = $_GET['period'] ?? ceil(date('n', time()) / 2);
     // $period=ceil(date('n',time())/2);
@@ -34,13 +34,13 @@
     ?>
     <div class="container mt-5 p-3 border rounded-lg shadow">
         <h1 class="text-center">發票列表</h1>
-        <nav>
+        <!-- <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                 <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab">2020年</a>
                 <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab">2021年</a>
                 <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab">2022年</a>
             </div>
-        </nav>
+        </nav> -->
         <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade show active" id="nav-home" role="tabpanel">
                 <ul class="nav nav-tabs">
@@ -94,7 +94,7 @@
                 echo "    <td>" . $row['period'] . "</td>";
                 echo "    <td>" . $row['code'] . "-" . $row['number'] . "</td>";
                 echo "    <td>" . $row['expense'] . "</td>";
-                echo "    <td class='btn-group'>";
+                echo "    <td class='btn-group text-nowrap'>";
                 echo "<a class='btn btn-outline-info' href='edit.php?id=" . $row['id'] . "'>編輯</a>";
                 echo "<a class='btn btn-outline-info' href='delete.php?id=" . $row['id'] . "'>刪除</a>";
                 echo "</td>";
