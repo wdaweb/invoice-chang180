@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>統一發票管理系統</title>
     <!-- <link rel="stylesheet" href="./css/style.css"> -->
-    <link rel="stylesheet" href="./bootstrap-4.4.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <style>
         body {
             font-family: "微軟正黑體";
@@ -55,8 +55,8 @@
                 <input class="form-control col-9" type="text" name="expense" pattern="^[1-9]\d*$" maxlength="10" required>
             </div>
             <input class="btn btn-outline-info m-2" type="submit" value="儲存">
-            <a class="btn btn-outline-info" href="list.php">發票列表</a>
-            <a class="btn btn-outline-info" href="invoice.php">輸入獎號</a>
+            <!-- <a class="btn btn-outline-info" href="list.php">發票列表</a>
+            <a class="btn btn-outline-info" href="invoice.php">輸入獎號</a> -->
         </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

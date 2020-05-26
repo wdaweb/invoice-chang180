@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>新增開獎獎號</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./bootstrap-4.4.1-dist/css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 
 <body>
-    <?php include "./include/header.php"; ?>
     <div class="container">
+    <?php include "./include/header.php"; ?>
 
         <form action="save_number.php" method="post">
-            <table class="invoice-table">
+            <table class="table">
                 <tr>
                     <td>年月份</td>
                     <td>

@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./bootstrap-4.4.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <style>
         body {
             font-family: "微軟正黑體";
-            min-width: 600px;
-            min-height: 100vh;
+            /* min-width: 600px;
+            min-height: 100vh; */
             /* background: linear-gradient(87deg, red, orange, gold, green, blue, indigo, purple); */
         }
     </style>
@@ -27,7 +27,7 @@ $id = $_GET['id'];
 <body>
     <!-- 基本就是輸入發票重抄一遍，以後再想辦法併回去 -->
     <?php include "./include/header.php"; ?>
-    <div class="container-fluid mt-5 p-3 col col-3 d-flex justify-content-center border rounded-lg shadow bg-dark alert-light">
+    <div class="container mt-5 p-3 col-3 d-flex justify-content-center border rounded-lg shadow bg-dark alert-light">
         <form action="save_invoice.php" method="post">
             <!-- 修改時需把要修改的發票id帶過去 -->
             <div><input type="hidden" name="id" value="<?= $id; ?>"></div>
@@ -61,8 +61,8 @@ $id = $_GET['id'];
                 <input class="form-control col-9" type="text" name="expense" pattern="^[1-9]\d*$" maxlength="10">
             </div>
             <input class="btn btn-outline-info m-2" type="submit" value="儲存">
-            <a class="btn btn-outline-info" href="list.php">發票列表</a>
-            <a class="btn btn-outline-info" href="award.php">對獎</a>
+            <!-- <a class="btn btn-outline-info" href="list.php">發票列表</a>
+            <a class="btn btn-outline-info" href="award.php">對獎</a> -->
         </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
