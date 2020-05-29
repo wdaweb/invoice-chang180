@@ -35,16 +35,16 @@ $year = date("Y");
 <body>
     <?php include "./include/header.php"; ?>
 
-    <div class="container">
+    <div class="container mt-5 p-3 border rounded-lg shadow">
         <!-- <form action="save_award.php" method="post"> -->
         <h1 class="text-center">期別</h1>
         <ul class="nav justify-content-center">
-            <li class="nav-item"><a class="nav-link" href='invoice.php?period=1' style="background:<?= ($period == 1) ? 'lightgreen' : 'white'; ?>">1,2月</a></li>
-            <li class="nav-item"><a class="nav-link" href='invoice.php?period=2' style="background:<?= ($period == 2) ? 'lightgreen' : 'white'; ?>">3,4月</a></li>
-            <li class="nav-item"><a class="nav-link" href='invoice.php?period=3' style="background:<?= ($period == 3) ? 'lightgreen' : 'white'; ?>">5,6月</a></li>
-            <li class="nav-item"><a class="nav-link" href='invoice.php?period=4' style="background:<?= ($period == 4) ? 'lightgreen' : 'white'; ?>">7,8月</a></li>
-            <li class="nav-item"><a class="nav-link" href='invoice.php?period=5' style="background:<?= ($period == 5) ? 'lightgreen' : 'white'; ?>">9,10月</a></li>
-            <li class="nav-item"><a class="nav-link" href='invoice.php?period=6' style="background:<?= ($period == 6) ? 'lightgreen' : 'white'; ?>">11,12月</a></li>
+            <li class="nav-item"><a class="nav-link" href='invoice.php?period=1' style="background:<?= ($period == 1) ? 'lightgray' : 'white'; ?>">1,2月</a></li>
+            <li class="nav-item"><a class="nav-link" href='invoice.php?period=2' style="background:<?= ($period == 2) ? 'lightgray' : 'white'; ?>">3,4月</a></li>
+            <li class="nav-item"><a class="nav-link" href='invoice.php?period=3' style="background:<?= ($period == 3) ? 'lightgray' : 'white'; ?>">5,6月</a></li>
+            <li class="nav-item"><a class="nav-link" href='invoice.php?period=4' style="background:<?= ($period == 4) ? 'lightgray' : 'white'; ?>">7,8月</a></li>
+            <li class="nav-item"><a class="nav-link" href='invoice.php?period=5' style="background:<?= ($period == 5) ? 'lightgray' : 'white'; ?>">9,10月</a></li>
+            <li class="nav-item"><a class="nav-link" href='invoice.php?period=6' style="background:<?= ($period == 6) ? 'lightgray' : 'white'; ?>">11,12月</a></li>
         </ul>
 
         <!-- <div class="input-group form-row mb-3 p-2">

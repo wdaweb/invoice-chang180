@@ -24,7 +24,7 @@
     <?php include "./include/header.php"; ?>
     <div class="container-fluid mt-5 p-3 col col-6 d-flex justify-content-center border rounded-lg shadow">
         <form action="save_invoice.php" method="post">
-            <h2>輸入發票號碼</h2>
+            <h1 class="text-center">輸入發票號碼</h1>
             <div class="input-group form-row mb-3 p-2">
                 <label class="col-3" for="year"> 年份：</label>
                 <select class="form-control col-9" name="year">
