@@ -27,17 +27,17 @@
                 <tr>
                     <!-- <td>年月份</td> -->
                     <td>
-                        <div class="input-group form-row mb-3 p-2">
+                        <div class="input-group form-row mb-3">
                             <label class="col-3" for="year"> 年份：</label>
-                            <select class="form-control col-9" name="year">
+                            <select class="form-control form-row col-9" name="year">
                                 <option value="2020">2020</option>
                                 <option value="2021">2021</option>
                                 <option value="2022">2022</option>
                             </select>
                         </div>
-                        <div class="input-group form-row mb-3 p-2">
+                        <div class="input-group form-row mb-3">
                             <label class="col-3" for="period">期別：</label>
-                            <select class="form-control col-9" name="period">
+                            <select class="form-control form-row col-9" name="period">
                                 <option value="1">1,2月</option>
                                 <option value="2">3,4月</option>
                                 <option value="3">5,6月</option>
@@ -60,31 +60,31 @@
                 <tr>
                     <td>
 
-                        <div class="input-group mb-3 p-2 form-row">
+                        <div class="input-group mb-3 form-row">
                             <label class="form-label col-3" for="num1">特別獎</label>
-                            <input class="form-control col-9" type="text" name="num1" pattern="\d{8}" placeholder="88888888" maxlength="8" required>
+                            <input class="form-control form-row col-9" type="text" name="num1" pattern="\d{8}" placeholder="88888888" maxlength="8" required>
                         </div>
                     </td>
                 </tr>
                 <tr>
                     <td>
 
-                        <div class="input-group mb-3 p-2 form-row">
+                        <div class="input-group mb-3 form-row">
                             <label class="form-label col-3" for="num1">特獎</label>
-                            <input class="form-control col-9" type="text" name="num2" pattern="\d{8}" placeholder="88888888" maxlength="8" required>
+                            <input class="form-control form-row col-9" type="text" name="num2" pattern="\d{8}" placeholder="88888888" maxlength="8" required>
                         </div>
                     </td>
                 </tr>
                 <tr>
                     <td>
 
-                        <div class="input-group mb-3 p-2 form-row">
-                            <label class="form-label col-3 flex-column" for="num3[]">頭獎</label>
-                            <div class="flex-column col-9">
+                        <div class="input-group mb-3 form-row">
+                            <label class="form-label col-3" for="num3[]">頭獎</label>
+                            <div class="flex-column col-9 m-0">
 
-                                <input class="form-control" type="text" name="num3[]" pattern="\d{8}" placeholder="88888888" maxlength="8" required>
-                                <input class="form-control" type="text" name="num3[]" pattern="\d{8}" placeholder="88888888" maxlength="8" required>
-                                <input class="form-control" type="text" name="num3[]" pattern="\d{8}" placeholder="88888888" maxlength="8">
+                                <input class="form-row form-control mb-2" type="text" name="num3[]" pattern="\d{8}" placeholder="88888888" maxlength="8" required>
+                                <input class="form-row form-control mb-2" type="text" name="num3[]" pattern="\d{8}" placeholder="88888888" maxlength="8" required>
+                                <input class="form-row form-control mb-2" type="text" name="num3[]" pattern="\d{8}" placeholder="88888888" maxlength="8">
                             </div>
                         </div>
                     </td>
@@ -92,12 +92,12 @@
                 <tr>
                     <td>
 
-                        <div class="input-group mb-3 p-2 form-row">
+                        <div class="input-group mb-3 form-row">
                             <label class="form-label col-3 flex-column" for="num4[]">增開六獎</label>
                             <div class="flex-column col-9">
 
-                                <input class="form-control" type="text" name="num4[]" pattern="\d{8}" placeholder="88888888" maxlength="8" required>
-                                <input class="form-control" type="text" name="num4[]" pattern="\d{8}" placeholder="88888888" maxlength="8" required>
+                                <input class="form-row form-control mb-2" type="text" name="num4[]" pattern="\d{8}" placeholder="88888888" maxlength="8" required>
+                                <input class="form-row form-control mb-2" type="text" name="num4[]" pattern="\d{8}" placeholder="88888888" maxlength="8" required>
                             </div>
                         </div>
                     </td>
