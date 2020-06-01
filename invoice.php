@@ -147,7 +147,7 @@ $year = date("Y");
                     <td><a class="btn btn-outline-secondary" href="award.php?aw=8&year=<?= $year; ?>&period=<?= $period; ?>">對獎</a></td>
                 </tr>
                 <tr>
-                    <th>增開六獎</th>
+                    <th rowspan="2">增開六獎</th>
                     <td>
                         <?php
                         foreach ($num4 as $num) {
@@ -158,10 +158,14 @@ $year = date("Y");
                     <td>
                         <a class="btn btn-outline-secondary" href="award.php?aw=9&year=<?= $year; ?>&period=<?= $period; ?>">對獎</a>
                     </td>
+                <tr>
+                    <td> 多賞你2百元</td>
+                </tr>
                 </tr>
             </tbody>
         </table>
-        <a class="btn btn-danger" href="edit_invoice.php?year=<?= $year; ?>&period=<?= $period; ?>">重新輸入本期獎號</a>
+        <!-- 不存在id則直接隱藏按鈕 -->
+        <a class="btn btn-danger" href="edit_invoice.php?year=<?= $year; ?>&period=<?= $period; ?>&id=<?= $num1['id'] ?? '" hidden>'; ?>">重新輸入本期獎號</a>
         <!-- <hr>
             <a href="list.php">發票列表</a>
             <a href="index.php">回首頁</a>

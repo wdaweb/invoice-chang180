@@ -9,9 +9,8 @@
     <style>
         body {
             font-family: "微軟正黑體";
-            /* min-width: 600px;
-            min-height: 100vh; */
-            /* background: linear-gradient(87deg, red, orange, gold, green, blue, indigo, purple); */
+            min-width: 600px;
+            min-height: 100vh;
         }
     </style>
 </head>

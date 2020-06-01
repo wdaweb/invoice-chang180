@@ -17,14 +17,16 @@ if (isset($_POST['id'])) {
     $sql = "INSERT INTO invoice (`period`,`year`,`code`,`number`,`expense`) VALUES ('$period','$year','$code','$number','$expense')";
 }
 
-echo "period=", $_POST['period'], "<br>";
-echo "year=", $_POST['year'], "<br>";
-echo "code=", $_POST['code'], "<br>";
-echo "number=", $_POST['number'], "<br>";
-echo "expense=", $_POST['expense'], "<br>";
+// echo "period=", $_POST['period'], "<br>";
+// echo "year=", $_POST['year'], "<br>";
+// echo "code=", $_POST['code'], "<br>";
+// echo "number=", $_POST['number'], "<br>";
+// echo "expense=", $_POST['expense'], "<br>";
 
-echo $sql;
+// echo $sql;
 $res = $pdo->exec($sql);
+
+to("index.php");
 
 if ($res == 1) {
     echo "新增/修改成功<br>";

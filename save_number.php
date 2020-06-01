@@ -16,8 +16,9 @@ require_once "./com/base.php";
 
 $table = "award_number";
 
-$year = $_POST['year']??$_GET['year'];
-$period = $_POST['period']??$_GET['period'];
+if(isset($_POST['id'])) $id=$_POST['id'];
+$year = $_POST['year'];
+$period = $_POST['period'];
 
 // 儲存特別獎
 $num1 = $_POST['num1'];
@@ -27,7 +28,12 @@ $data = [
     "number" => $num1,
     "type" => 1,
 ];
+
+if(isset($id)) $data["id"]=$id;
+// var_dump($data);
+
 save($table, $data);
+
 
 // 儲存特獎
 $num2 = $_POST['num2'];
@@ -37,6 +43,9 @@ $data = [
     "number" => $num2,
     "type" => 2,
 ];
+
+//必須設定為++$id，不然不會先計算
+if(isset($id)) $data["id"]=++$id;
 save($table, $data);
 
 // 儲存頭獎
@@ -48,7 +57,9 @@ foreach ($num3 as $num) {
         "number" => $num,
         "type" => 3,
     ];
+    if(isset($id)) $data["id"]=++$id;
     save($table, $data);
+    
 }
 
 // 儲存增開六獎
@@ -60,9 +71,12 @@ foreach ($num4 as $num) {
         "number" => $num,
         "type" => 4,
     ];
+    if(isset($id)) $data["id"]=++$id;
 
     save($table, $data);
 }
+// var_dump($data);
+// exit;
 
 
 to("invoice.php");
