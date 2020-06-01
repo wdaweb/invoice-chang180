@@ -22,12 +22,7 @@
     <?php
     include "./com/base.php";
     include "./include/header.php";
-    // PHP語法糖 合併運算符 ??
     $period = $_GET['period'] ?? ceil(date('n', time()) / 2);
-    // $period=ceil(date('n',time())/2);
-    // if( isset($_GET['period'])){
-    //     $period=$_GET['period'];
-    // }
 
     $sql = "SELECT * FROM `invoice` WHERE period='$period'";
     $rows = $pdo->query($sql)->fetchAll();

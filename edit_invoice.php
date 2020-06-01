@@ -29,22 +29,22 @@
                     <td>
                         <div class="input-group form-row mb-3">
                             <label class="col-3" for="year"> 年份：</label>
-                            <select class="form-control form-row col-9" name="year" value="<?= $_GET['year'] ?? ''; ?>">
-                                <option value="2020">2020</option>
+                            <input class="form-control form-row col-9" name="year" value="<?= $_GET['year'] ?? ''; ?>" disabled>
+                            <!-- <option value="2020">2020</option>
                                 <option value="2021">2021</option>
-                                <option value="2022">2022</option>
-                            </select>
+                                <option value="2022">2022</option> -->
+                            </input>
                         </div>
                         <div class="input-group form-row mb-3">
                             <label class="col-3" for="period">期別：</label>
-                            <select class="form-control form-row col-9" name="period" value="<?= $_GET['period'] ?? ''; ?>"">
-                                <option value=" 1">1,2月</option>
+                            <input class="form-control form-row col-9" name="period" value="<?= $_GET['period'] ?? ''; ?>" disabled>
+                            <!-- <option value="1">1,2月</option>
                                 <option value="2">3,4月</option>
                                 <option value="3">5,6月</option>
                                 <option value="4">7,8月</option>
                                 <option value="5">9,10月</option>
-                                <option value="6">11,12月</option>
-                            </select>
+                                <option value="6">11,12月</option> -->
+                            </input>
                         </div>
                         <!-- <input class="" type="number" name="year" id=""> -->
                         <!-- <select class="" name="period">

@@ -16,8 +16,8 @@ require_once "./com/base.php";
 
 $table = "award_number";
 
-$year = $_POST['year'];
-$period = $_POST['period'];
+$year = $_POST['year']??$_GET['year'];
+$period = $_POST['period']??$_GET['period'];
 
 // 儲存特別獎
 $num1 = $_POST['num1'];
