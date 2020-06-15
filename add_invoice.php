@@ -96,8 +96,8 @@
                             <label class="form-label col-3 flex-column" for="num4[]">增開六獎</label>
                             <div class="flex-column col-9">
 
-                                <input class="form-row form-control mb-2" type="text" name="num4[]" pattern="\d{3}" placeholder="88888888" maxlength="8" required>
-                                <input class="form-row form-control mb-2" type="text" name="num4[]" pattern="\d{3}" placeholder="88888888" maxlength="8">
+                                <input class="form-row form-control mb-2" type="text" name="num4[]" pattern="\d{3}" placeholder="888" maxlength="3" required>
+                                <input class="form-row form-control mb-2" type="text" name="num4[]" pattern="\d{3}" placeholder="888" maxlength="3">
                             </div>
                         </div>
                     </td>
