@@ -13,7 +13,6 @@
             min-width: 600px;
             min-height: 100vh;
             background: #eee;
-            /* overflow: hidden; */
         }
     </style>
 </head>
@@ -24,20 +23,21 @@
     include "./include/header.php";
     $period = $_GET['period'] ?? ceil(date('n', time()) / 2);
 
-    $sql = "SELECT * FROM `invoice` WHERE period='$period'";
-    $rows = $pdo->query($sql)->fetchAll();
+    // $sql = "SELECT * FROM `invoice` WHERE period='$period'";
+    // $rows = $pdo->query($sql)->fetchAll();
+    $rows=all('invoice',['period'=>$period]);
     ?>
     <div class="container mt-5 p-3 border rounded-lg shadow">
         <h1 class="text-center">發票列表</h1>
         <!-- <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab">2020年</a>
-                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab">2021年</a>
-                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab">2022年</a>
+                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home">2020年</a>
+                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile">2021年</a>
+                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact">2022年</a>
             </div>
         </nav> -->
         <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="nav-home" role="tabpanel">
+            <div class="tab-pane fade show active" id="nav-home">
                 <ul class="nav nav-tabs">
                     <li class="nav-item"><a class="nav-link  <?= ($period == 1) ? 'active' : ''; ?>" href='list.php?period=1'>1,2月</a></li>
                     <li class="nav-item"><a class="nav-link  <?= ($period == 2) ? 'active' : ''; ?>" href='list.php?period=2'>3,4月</a></li>
@@ -49,7 +49,7 @@
                 </ul>
 
             </div>
-            <div class="tab-pane fade" id="nav-profile" role="tabpanel">
+            <!-- <div class="tab-pane fade" id="nav-profile" role="tabpanel">
                 <ul class="nav nav-tabs">
                     <li class="nav-item"><a class="nav-link  <?= ($period == 1) ? 'active' : ''; ?>" href='list.php?period=1'>1,2月</a></li>
                     <li class="nav-item"><a class="nav-link  <?= ($period == 2) ? 'active' : ''; ?>" href='list.php?period=2'>3,4月</a></li>
@@ -72,7 +72,7 @@
 
                 </ul>
 
-            </div>
+            </div> -->
         </div>
         <table class="table">
             <tr>
@@ -94,7 +94,6 @@
                 echo "<a class='btn btn-outline-info' href='delete.php?id=" . $row['id'] . "'>刪除</a>";
                 echo "</td>";
                 echo "</tr>";
-                // echo "<tr><td>",$row['id'], "</td><td>", $row['name'], "</td><td>", $row['tel'], "</td></tr>";
             }
             ?>
         </table>
